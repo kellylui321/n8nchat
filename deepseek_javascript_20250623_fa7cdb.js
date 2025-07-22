@@ -542,6 +542,11 @@
         async function startNewConversation() {
             currentSessionId = generateUUID();
             const data = [{
+                action: "loadPreviousSession",
+                sessionId: currentSessionId,
+                route: config.webhook.route,
+                metadata: {
+                    userId: ""
                 }
             }];
 
